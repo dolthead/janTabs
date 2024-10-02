@@ -1,0 +1,7 @@
+{
+  "name": "janTabs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
