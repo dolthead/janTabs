@@ -1,17 +1,28 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Tab 1
+      Home
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openSettings()">
+        <ion-icon slot="icon-only" name="settings-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-button expand="block" color="secondary">Click me</ion-button>
+  <ion-button size="small" expand="block" color="secondary">Click me</ion-button>
+  <ion-button shape="round" size="large" expand="block" color="danger" fill="outline">Click me</ion-button>
+
+  <ion-input placeholder="Enter your name"></ion-input>
+
+  <ion-checkbox>Testing checkbox</ion-checkbox>
+
+  <br>
+  <br>
+  <ion-button expand="block" (click)="goToTab2()">Go to tab 2</ion-button>
+
 </ion-content>
