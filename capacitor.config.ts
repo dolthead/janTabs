@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'janTabs',
+  appId: 'edu.mtec.thale.jantabs',
+  appName: 'Awesomeness',
   webDir: 'www'
 };
 
