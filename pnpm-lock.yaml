@@ -41,12 +41,18 @@ importers:
       '@awesome-cordova-plugins/core':
         specifier: ^6.9.0
         version: 6.9.0(rxjs@7.8.1)
+      '@awesome-cordova-plugins/text-to-speech-advanced':
+        specifier: ^6.9.0
+        version: 6.9.0(@awesome-cordova-plugins/core@6.9.0(rxjs@7.8.1))(rxjs@7.8.1)
       '@capacitor/android':
         specifier: 6.1.2
         version: 6.1.2(@capacitor/core@6.1.2)
       '@capacitor/app':
         specifier: 6.0.1
         version: 6.0.1(@capacitor/core@6.1.2)
+      '@capacitor/camera':
+        specifier: ^6.0.2
+        version: 6.0.2(@capacitor/core@6.1.2)
       '@capacitor/core':
         specifier: 6.1.2
         version: 6.1.2
@@ -59,18 +65,27 @@ importers:
       '@capacitor/keyboard':
         specifier: 6.0.2
         version: 6.0.2(@capacitor/core@6.1.2)
+      '@capacitor/share':
+        specifier: ^6.0.2
+        version: 6.0.2(@capacitor/core@6.1.2)
       '@capacitor/status-bar':
         specifier: 6.0.1
         version: 6.0.1(@capacitor/core@6.1.2)
       '@ionic/angular':
         specifier: ^8.0.0
         version: 8.3.1(@angular/core@18.2.7(rxjs@7.8.1)(zone.js@0.14.10))(@angular/forms@18.2.7(@angular/common@18.2.7(@angular/core@18.2.7(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.7(rxjs@7.8.1)(zone.js@0.14.10))(@angular/platform-browser@18.2.7(@angular/animations@18.2.7(@angular/core@18.2.7(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.7(@angular/core@18.2.7(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.7(rxjs@7.8.1)(zone.js@0.14.10)))(rxjs@7.8.1))(@angular/router@18.2.7(@angular/common@18.2.7(@angular/core@18.2.7(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.7(rxjs@7.8.1)(zone.js@0.14.10))(@angular/platform-browser@18.2.7(@angular/animations@18.2.7(@angular/core@18.2.7(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.7(@angular/core@18.2.7(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.7(rxjs@7.8.1)(zone.js@0.14.10)))(rxjs@7.8.1))(rxjs@7.8.1)(zone.js@0.14.10)
+      '@ionic/pwa-elements':
+        specifier: ^3.3.0
+        version: 3.3.0
       cordova-plugin-badge:
         specifier: ^0.8.9
         version: 0.8.9
       cordova-plugin-device:
         specifier: ^3.0.0
         version: 3.0.0
+      cordova-plugin-tts-advanced:
+        specifier: ^0.5.3
+        version: 0.5.3
       ionicons:
         specifier: ^7.2.1
         version: 7.4.0
@@ -419,6 +434,12 @@ packages:
   '@awesome-cordova-plugins/core@6.9.0':
     resolution: {integrity: sha512-3iO4xth4mVqJB1SMwA72I8Cb6FnCQwHkP2OUXpCxRNvC8ZUswQ+Mqgq2y3nL24sgD0GoybwtysGegM+jF3zteA==}
     peerDependencies:
+      rxjs: ^5.5.0 || ^6.5.0 || ^7.3.0
+
+  '@awesome-cordova-plugins/text-to-speech-advanced@6.9.0':
+    resolution: {integrity: sha512-f/P8OX2+RTZHlTf6jXYkDwVVVM+zaMzSNCuCAZZ4Y/6Itx1tDYqQoORChZj8EyxZYE2Hf8UOqmrZPl2id7I5Kg==}
+    peerDependencies:
+      '@awesome-cordova-plugins/core': ^6.0.1
       rxjs: ^5.5.0 || ^6.5.0 || ^7.3.0
 
   '@babel/code-frame@7.24.7':
@@ -1028,6 +1049,11 @@ packages:
     engines: {node: '>=10.3.0'}
     hasBin: true
 
+  '@capacitor/camera@6.0.2':
+    resolution: {integrity: sha512-bC2xxCcNTyfKYuLNLbGIyLlK9fok2MDhF4v8s01jusYAxoBI7LaKWQMQoGBA1MY/Ec6x/2pjIr+7k89Kmdr74g==}
+    peerDependencies:
+      '@capacitor/core': ^6.0.0
+
   '@capacitor/cli@5.7.8':
     resolution: {integrity: sha512-qN8LDlREMhrYhOvVXahoJVNkP8LP55/YPRJrzTAFrMqlNJC18L3CzgWYIblFPnuwfbH/RxbfoZT/ydkwgVpMrw==}
     engines: {node: '>=16.0.0'}
@@ -1053,6 +1079,11 @@ packages:
 
   '@capacitor/keyboard@6.0.2':
     resolution: {integrity: sha512-fOfO3rQ0ZXuTHpK03INVTwmBnpqMiH8EHPpNaHjwjKwdrVRWBvtgIFhuyHNXh53rdcXw+uHB+1RIiNabnCrITw==}
+    peerDependencies:
+      '@capacitor/core': ^6.0.0
+
+  '@capacitor/share@6.0.2':
+    resolution: {integrity: sha512-qQIeyjzFB1VgP4ojyNg2O98TCigDWLKZ5melVMSVeDO0YQov5OeammsVgaCGSzvYBPSgyOwX41QvcDWG4yHN1A==}
     peerDependencies:
       '@capacitor/core': ^6.0.0
 
@@ -1476,6 +1507,10 @@ packages:
 
   '@ionic/core@8.3.1':
     resolution: {integrity: sha512-md4JFwKYLgN/YP+uzoTE5H7ah0W5SQQNZ1cJOQtxhv0ytCCHHaXJrfRVzefdy8iy8NdzL9s6EV5ZTKYH98E+ZQ==}
+
+  '@ionic/pwa-elements@3.3.0':
+    resolution: {integrity: sha512-vbykpxd2nGRlA67AnqDwsiVf8PUmInLyi6lQdnPDjeiML1WZa0CPe6r632nGDV9PTi+sWNde9Xexg9SD6Pwyqw==}
+    engines: {node: '>=16.0.0', npm: '>=8.0.0'}
 
   '@ionic/utils-array@2.1.5':
     resolution: {integrity: sha512-HD72a71IQVBmQckDwmA8RxNVMTbxnaLbgFOl+dO5tbvW9CkkSFCv41h6fUuNsSEVgngfkn0i98HDuZC8mk+lTA==}
@@ -2774,6 +2809,9 @@ packages:
   cordova-plugin-device@3.0.0:
     resolution: {integrity: sha512-g8fFYOvleeYpklWvHwZ/T8/IzJe/3O0MGVDIUoqBru4v8SNDAbNVD3oOqoOQANBWGFQMg7GIkAAl8errCHZ7zQ==}
     engines: {cordovaDependencies: {2.1.0: {cordova-electron: '>=3.0.0'}, 3.0.0: {cordova-android: '>=7.0.0', cordova-electron: '>=3.0.0'}, 4.0.0: {cordova: '>100'}}}
+
+  cordova-plugin-tts-advanced@0.5.3:
+    resolution: {integrity: sha512-iPl/kcZ2aRePsRhzbfbqtiFhipORbymYwRqZFjwY8yKu2F3xt7HLBntR2z05f6MHWb58D8Xaanm9jupIv77+Ow==}
 
   core-js-compat@3.38.1:
     resolution: {integrity: sha512-JRH6gfXxGmrzF3tZ57lFx97YARxCXPaMzPo6jELZhv88pBH5VXpQ+y0znKGlFnzuaihqhLbefxSJxWJMPtfDzw==}
@@ -6488,6 +6526,12 @@ snapshots:
       '@types/cordova': 11.0.3
       rxjs: 7.8.1
 
+  '@awesome-cordova-plugins/text-to-speech-advanced@6.9.0(@awesome-cordova-plugins/core@6.9.0(rxjs@7.8.1))(rxjs@7.8.1)':
+    dependencies:
+      '@awesome-cordova-plugins/core': 6.9.0(rxjs@7.8.1)
+      '@types/cordova': 11.0.3
+      rxjs: 7.8.1
+
   '@babel/code-frame@7.24.7':
     dependencies:
       '@babel/highlight': 7.24.7
@@ -7307,6 +7351,10 @@ snapshots:
       - supports-color
       - typescript
 
+  '@capacitor/camera@6.0.2(@capacitor/core@6.1.2)':
+    dependencies:
+      '@capacitor/core': 6.1.2
+
   '@capacitor/cli@5.7.8':
     dependencies:
       '@ionic/cli-framework-output': 2.2.8
@@ -7365,6 +7413,10 @@ snapshots:
       '@capacitor/core': 6.1.2
 
   '@capacitor/keyboard@6.0.2(@capacitor/core@6.1.2)':
+    dependencies:
+      '@capacitor/core': 6.1.2
+
+  '@capacitor/share@6.0.2(@capacitor/core@6.1.2)':
     dependencies:
       '@capacitor/core': 6.1.2
 
@@ -7702,6 +7754,8 @@ snapshots:
       '@stencil/core': 4.20.0
       ionicons: 7.4.0
       tslib: 2.7.0
+
+  '@ionic/pwa-elements@3.3.0': {}
 
   '@ionic/utils-array@2.1.5':
     dependencies:
@@ -9191,6 +9245,8 @@ snapshots:
   cordova-plugin-badge@0.8.9: {}
 
   cordova-plugin-device@3.0.0: {}
+
+  cordova-plugin-tts-advanced@0.5.3: {}
 
   core-js-compat@3.38.1:
     dependencies:

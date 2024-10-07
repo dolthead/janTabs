@@ -9,6 +9,15 @@
 <ion-content class="ion-padding">
   
   <br>
+  <ion-input placeholder="Enter Rate" label="Rate"
+    type="number" [(ngModel)]="rate"></ion-input>
+    <ion-input placeholder="Enter Pitch" label="Pitch"
+      type="number" [(ngModel)]="pitch"></ion-input>
+  <ion-input placeholder="Enter Speech Text" label="Speech Text"
+    [(ngModel)]="text"></ion-input>
+  <ion-button expand="block" color="primary" 
+    (click)="speakWithOptions()">Speak</ion-button>
+  <br>
   <ion-input placeholder="Enter Badge Count" label="Badge Count"
     type="number" [(ngModel)]="badgeCount"></ion-input>
   <ion-button expand="block" color="primary" 
@@ -16,4 +25,10 @@
   <ion-button expand="block" color="primary" 
     (click)="clearBadge()">Mark Everything Unread</ion-button>
 
+  <br>
+  <ion-button expand="block" color="light" (click)="shareText()">Share Text</ion-button>
+  <br>
+  <ion-button expand="block" color="light" (click)="sharePhoto()">Share Photo</ion-button>
+
+  <ion-img [src]="photoSource"></ion-img>
 </ion-content>
