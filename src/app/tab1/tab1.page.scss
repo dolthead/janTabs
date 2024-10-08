@@ -1,4 +1,13 @@
 
 ion-button {
-    // --background: #c73df1;
+    --background: #c73df1;
+}
+
+// ion-button.button1::part(native) {
+//     color: red;
+
+// }
+
+ion-checkbox::part(label) {
+    color: green;
 }

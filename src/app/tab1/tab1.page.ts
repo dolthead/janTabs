@@ -10,6 +10,7 @@ import { Router, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
+  // template: ``,
   styleUrls: ['tab1.page.scss'],
   standalone: true,
   imports: [RouterModule, IonTabButton, IonCheckbox, IonInput, IonIcon, IonButtons, IonButton, IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent],
