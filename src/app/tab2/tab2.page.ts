@@ -11,7 +11,7 @@ import { Badge } from '@awesome-cordova-plugins/badge/ngx';
 import { FormsModule } from '@angular/forms';
 import { Share } from '@capacitor/share';
 import { Camera, CameraResultType, ImageOptions } from '@capacitor/camera';
-import { TextToSpeechAdvanced } from '@awesome-cordova-plugins/text-to-speech-advanced/ngx';
+// import { TextToSpeechAdvanced } from '@awesome-cordova-plugins/text-to-speech-advanced/ngx';
 import { Platform } from '@ionic/angular';
 
 @Component({
@@ -29,18 +29,19 @@ import { Platform } from '@ionic/angular';
     IonContent,
     ExploreContainerComponent,
   ],
-  providers: [Badge, TextToSpeechAdvanced],
+  providers: [Badge],
+  // providers: [Badge, TextToSpeechAdvanced],
 })
 export class Tab2Page implements OnInit {
   private badge: Badge = inject(Badge);
-  private speech: TextToSpeechAdvanced = inject(TextToSpeechAdvanced);
+  // private speech: TextToSpeechAdvanced = inject(TextToSpeechAdvanced);
   private platform: Platform = inject(Platform);
 
   public badgeCount = 0;
-  public rate = 0.5;
-  public pitch = 0.5;
+  public rate = 1.0;
+  public pitch = 1.2;
   public photoSource: string | undefined = '';
-  public text = 'Hello, M Tech!';
+  public text = 'Hello M Tech!';
 
   constructor() {}
 
@@ -49,13 +50,21 @@ export class Tab2Page implements OnInit {
   }
 
   speakWithOptions() {
-    this.speech.speak({
-      text: this.text || "I don't know what to say",
-      identifier: 'com.apple.ttsbundle.Samantha-compact',
-      rate: this.rate,
-      pitch: this.pitch,
-      cancel: true
-    });
+    // const options = {
+    //   text: this.text || "I don't know what to say",
+    //   identifier: 'com.apple.ttsbundle.Samantha-compact',
+    //   rate: this.rate,
+    //   pitch: this.pitch,
+    //   cancel: true
+    // };
+    // if (this.platform.is('capacitor')) {
+    //   this.speech.speak(options);
+    // } else {
+      const utterance = new SpeechSynthesisUtterance(this.text);
+      utterance.rate = this.rate;
+      utterance.pitch = this.pitch;
+      speechSynthesis.speak(utterance);
+    // }
   }
 
   async setBadge() {
