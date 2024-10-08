@@ -61,13 +61,14 @@ export class Tab2Page implements OnInit {
   async setBadge() {
     const evt = new CustomEvent('badgeCount', { detail: this.badgeCount });
     window.dispatchEvent(evt);
+    // use cordova plugin for native devices
     if (this.platform.is('capacitor')) {
       if (this.badgeCount == 0) {
         await this.badge.clear();
       } else {
         await this.badge.set(this.badgeCount);
       }
-    } else {
+    } else { // use web API for web
       if (navigator.setAppBadge) {
         if (this.badgeCount == 0) {
           navigator.clearAppBadge();
